@@ -1,5 +1,7 @@
 Rails4app::Application.routes.draw do
 
+  resources :ingredients
+
   resources :recipes
 
   get "welcome/index"
