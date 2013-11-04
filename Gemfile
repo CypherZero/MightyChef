@@ -19,6 +19,7 @@ gem 'compass-rails' # you need this or you get an err
 
 gem 'zurb-foundation', '~> 4.3.0'
 
+gem "pry-rails", "~> 0.3.2"
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
