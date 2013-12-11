@@ -1,6 +1,6 @@
 ###README
 
-#### _Mighty Chef_ is a recipe management program that can compile multiple recipes into a single task list. So for example, if you have three recipes and all of them involves cutting a certain style of onion, instead of cutting them three seperate times, you cut them all at once. We'll do the same with ingredients: if you have multiple recipes and they all requires garlic, it will generate a shopping list with the single right amount of garlic.
+_Mighty Chef_ is a recipe management program that can compile multiple recipes into a single task list. So for example, if you have three recipes and all of them involves cutting a certain style of onion, instead of cutting them three seperate times, you cut them all at once. We'll do the same with ingredients: if you have multiple recipes and they all requires garlic, it will generate a shopping list with the single right amount of garlic.
 
 Recipes are broken down into a number of tasks. For example, grilling a side of steak is a task; each task can have an optional egg-timer that default to an optimal time, so your steak will never overcook. You can start multiple task and the their timers will let you know that a task is done. _Mighty Chef_ allows you to become multi-tasking, steak-perfecting, villian-beating super cook!
 
