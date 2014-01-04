@@ -11,6 +11,9 @@ gem 'sass-rails', '~> 4.0.0'
 
 # Use bootstrap as default theme provider
 gem 'bootstrap-sass'
+group :development do
+  gem 'rails_layout'
+end
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
