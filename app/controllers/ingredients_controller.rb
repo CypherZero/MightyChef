@@ -4,7 +4,11 @@ class IngredientsController < ApplicationController
   # GET /ingredients
   # GET /ingredients.json
   def index
-    @ingredients = Ingredient.all
+    @ingredients = Ingredient.order(:name)
+    respond_to do |format| 
+      format.html 
+      format.json { render json: @ingredients.tokens(params[:q]) }
+    end
   end
 
   # GET /ingredients/1

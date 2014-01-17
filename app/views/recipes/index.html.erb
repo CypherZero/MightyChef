@@ -3,38 +3,39 @@
 <br/>
 
 <%= form_tag({controller: "recipes", action: "index"}, method: 'get') do %>
-  <p>
-    <%= text_field_tag :search, params[:search] %>
-    <%= submit_tag "Search", :name => nil %>
-  </p>
+<p>
+  <%= text_field_tag :search, params[:search] %>
+  <%= submit_tag "Search", :name => nil %>
+</p>
 <% end %>
 
 <br/>
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Description</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
+<div class="table-responsive">
+  <table class="table table-hover table-striped">
+    <thead>
+      <tr>
+        <th></th>
+        <th>Name</th>
+        <th>Description</th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
 
-  <tbody>
+    <tbody>
 
-    <% @recipes.each do |recipe| %>
-    <tr>
-      <td><%= recipe.name %></td>
-      <td><%= recipe.description %></td>
-      <td><%= link_to 'Show', recipe %></td>
-      <td><%= link_to 'Edit', edit_recipe_path(recipe) %></td>
-      <td><%= link_to 'Destroy', recipe, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-    </tr>
-    <% end %>
-  </tbody>
-</table>
-
+      <% @recipes.each do |recipe| %>
+      <tr>
+        <td><%= link_to '', edit_recipe_path(recipe), :class => "glyphicon glyphicon-edit" %></td>
+        <td><%= recipe.name %></td>
+        <td><%= recipe.description %></td>
+        <td><%= link_to 'Show', recipe  %></td>
+        <td><%= link_to '', recipe, :class => "glyphicon glyphicon-remove", method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
 <br>
 
 <%= link_to 'New Recipe', new_recipe_path %>

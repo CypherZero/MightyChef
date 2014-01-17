@@ -30,7 +30,12 @@
     </div>
   </div>
 </div>
-</div>
+<hr/>
+  <div class="field">
+    <%= f.label :ingredient_tokens, "Ingredients" %><br/>
+    <%= f.text_field :ingredient_tokens, data: {load: @recipe.ingredients} %>
+  </div>
+
 <div class="actions">
   <%= f.submit %>
 </div>

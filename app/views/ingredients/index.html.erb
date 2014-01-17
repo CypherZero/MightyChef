@@ -1,18 +1,26 @@
-<h1>Listing ingredients</h1>
+<h1>Ingredients</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Description</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
+<%= form_tag({controller: "ingredients", action: "index"}, method: 'get') do %>
+<p>
+  <%= text_field_tag :search, params[:search] %>
+  <%= submit_tag "Search", :name => nil %>
+</p>
+<% end %>
 
-  <tbody>
-    <% @ingredients.each do |ingredient| %>
+<div class="table-responsive" >
+  <table class="table table-striped table-hover">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+        <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @ingredients.each do |ingredient| %>
       <tr>
         <td><%= ingredient.name %></td>
         <td><%= ingredient.description %></td>
@@ -20,10 +28,10 @@
         <td><%= link_to 'Edit', edit_ingredient_path(ingredient) %></td>
         <td><%= link_to 'Destroy', ingredient, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
-    <% end %>
-  </tbody>
-</table>
-
+      <% end %>
+    </tbody>
+  </table>
+</div>
 <br>
 
 <%= link_to 'New Ingredient', new_ingredient_path %>

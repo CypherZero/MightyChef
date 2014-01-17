@@ -35,6 +35,14 @@ gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
 
+#Simple Form aims to be as flexible as possible while helping you with powerful components to create your forms. The basic goal of Simple Form is to not touch your way of defining the layout, letting you find the better
+gem 'simple_form' 
+
+group :assets do
+	# Chosen is a library for making long, unwieldy select boxes more user friendly.
+	gem 'chosen-rails'
+end
+
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
@@ -52,4 +60,3 @@ end
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
-gem 'simple_form'
