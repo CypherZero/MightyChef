@@ -7,7 +7,7 @@ class Recipe < ActiveRecord::Base
 	accepts_nested_attributes_for :recipe_ingredients 
 
 	def ingredient_tokens=(tokens)
-		self.ingredient_ids = Ingredient.ids_from_token(tokens)
+		self.ingredient_ids = Ingredient.ids_from_tokens(tokens)
 	end
 	
 	def self.search(search)
