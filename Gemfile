@@ -29,6 +29,9 @@ gem "pry-rails", "~> 0.3.2"
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 
+# Unbreak jquery because the use of TurboLinks 
+gem 'jquery-turbolinks'
+
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
 
